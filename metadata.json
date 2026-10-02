@@ -1,0 +1,6 @@
+{
+  "name": "NOVA CART: Nexus OS & Rescue Platform",
+  "description": "AI-driven turnaround operating system for NOVA CART solving ghost inventory, store order rejection, delivery bundling, and retention death spiral with measurable ₹25L ROI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

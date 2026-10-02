@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream-bg: #fff6dc;
+  --color-cream-surface: #ffffff;
+  --color-cream-warm: #fef9e7;
+  --color-cream-border: #ebd99f;
+  --color-cream-border-subtle: #f4e8be;
+  
+  --color-amber-primary: #d97706;
+  --color-amber-dark: #b45309;
+  --color-amber-vibrant: #f59e0b;
+  --color-amber-light: #fef3c7;
+  
+  --color-rose-primary: #e11d48;
+  --color-rose-light: #ffe4e6;
+  --color-rose-border: #fecdd3;
+  
+  --color-mint-primary: #059669;
+  --color-mint-light: #ecfdf5;
+  --color-mint-border: #a7f3d0;
+  
+  --color-blue-primary: #0284c7;
+  --color-blue-light: #e0f2fe;
+  --color-blue-border: #bae6fd;
+}
+
+:root {
+  --bg: #fff6dc;
+  --bg-gradient: linear-gradient(135deg, #fff6dc 0%, #fffaea 40%, #fff1c5 100%);
+  --surface: #ffffff;
+  --surface-warm: #fef9e7;
+  --cream-base: #fff6dc;
+  --cream-border: #ebd99f;
+  --cream-border-subtle: #f4e8be;
+  --amber-primary: #d97706;
+  --amber-dark: #b45309;
+  --amber-vibrant: #f59e0b;
+  --amber-light: #fef3c7;
+  --rose-primary: #e11d48;
+  --rose-light: #ffe4e6;
+  --rose-border: #fecdd3;
+  --mint-primary: #059669;
+  --mint-light: #ecfdf5;
+  --mint-border: #a7f3d0;
+  --blue-primary: #0284c7;
+  --blue-light: #e0f2fe;
+  --blue-border: #bae6fd;
+  --text-main: #0f172a;
+  --text-muted: #334155;
+  --text-light: #64748b;
+  --shadow-cream: 0 10px 30px -5px rgba(217, 119, 6, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-hover: 0 20px 40px -10px rgba(217, 119, 6, 0.18);
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #fff6dc 0%, #fffaea 40%, #fff1c5 100%);
+    background-attachment: fixed;
+    color: #0f172a;
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars matching cream warm theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fef9e7;
+}
+::-webkit-scrollbar-thumb {
+  background: #ebd99f;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Custom Shadows and Card utilities from SIH 2026 design system */
+.shadow-cream {
+  box-shadow: 0 10px 30px -5px rgba(217, 119, 6, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+}
+
+.shadow-cream-hover:hover {
+  box-shadow: 0 20px 40px -10px rgba(217, 119, 6, 0.18);
+  transform: translateY(-2px);
+}
+
+.card-warm {
+  background: #ffffff;
+  border: 1.5px solid #ebd99f;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px -5px rgba(217, 119, 6, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+}
+
+.glow-card {
+  box-shadow: 0 10px 30px -5px rgba(217, 119, 6, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+}
+
+.badge-tag {
+  background: #fef9e7;
+  color: #b45309;
+  border: 1.5px solid #ebd99f;
+  border-radius: 9999px;
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 4px 12px;
+}
+
+.btn-gradient-amber {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.35);
+  font-weight: 800;
+}
+
+.btn-gradient-amber:hover {
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.45);
+  transform: translateY(-1px);
+}
+
+@keyframes pulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(5, 150, 105, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+}
+
+.pulse-emerald {
+  animation: pulseDot 2s infinite;
+}
+
+
+
